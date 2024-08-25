@@ -4,6 +4,7 @@
     <head>
         <meta charset="utf-8">
         <title>KK Electrical</title>
+        <link rel="icon" type="image/icon" href="img/logo.jpeg">
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
         <meta content="Free HTML Templates" name="keywords">
         <meta content="Free HTML Templates" name="description">
@@ -21,7 +22,7 @@
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
 
         <!-- Libraries Stylesheet -->
-        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+        <!-- <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet"> -->
 
         <!-- Customized Bootstrap Stylesheet -->
         <link href="style.css" rel="stylesheet">
@@ -50,25 +51,26 @@
                         </div>
                     </form>
                 </div>
-
+                <div class="col-lg-3 col-6 text-right">
+                    <!-- <a href="" class="btn border">
+                        <i class="fas fa-heart text-primary"></i>
+                        <span class="badge">0</span>
+                    </a> -->
+                    <a href="" class="btn border">
+                        <i class="fas fa-shopping-cart text-primary"></i>
+                        <span class="badge">0</span>
+                    </a>
+                </div>
             </div>
         </div>
         <!-- Topbar End -->
 
 
         <!-- Navbar Start -->
-        <div class="container-fluid">
-            <div class="row border-top px-xl-5">
-                <div class="col-lg-3 d-none d-lg-block ">
-                    <a class="btn shadow-none d-flex align-items-center justify-content-between bg-primary text-white w-75 "
-                        data-toggle="collapse" href="#navbar-vertical"
-                        style="height: 65px; margin-top: -1px; padding: 0 30px; border-radius: 20px;">
-                        <h6 class="m-0 text-white">Call For Service</h6>
-                        <!-- <i class="fa fa-angle-down text-dark"></i> -->
-                    </a>
-
-                </div>
-                <div class="col-lg-9">
+        <div class="container">
+            <!-- <div class="row border-top px-xl-5"> -->
+                
+                <!-- <div class="col-lg-9"> -->
                     <nav class="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-0">
                         <a href="" class="text-decoration-none d-block d-lg-none">
                             <h1 class="m-0 display-5 font-weight-semi-bold"><span
@@ -83,18 +85,25 @@
                                 <a href="index.html" class="nav-item nav-link">Home</a>
                                 <a href="Service.html" class="nav-item nav-link">Services</a>
                                 <a href="Accessory.html" class="nav-item nav-link">Accessory</a>
+                                <div class="nav-item dropdown">
+                                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Pages</a>
+                                    <div class="dropdown-menu rounded-0 m-0">
+                                        <a href="cart.html" class="dropdown-item">Shopping Cart</a>
+                                        <!-- <a href="checkout.html" class="dropdown-item">Checkout</a> -->
+                                    </div>
+                                </div>
                                 <!-- <a href="detail.html" class="nav-item nav-link">Shop Detail</a> -->
 
                                 <a href="contact.html" class="nav-item nav-link active">Contact</a>
                             </div>
                             <div class="navbar-nav ml-auto py-0">
-                                <a href="" class="nav-item nav-link">Login</a>
+                                <a href="login.html" class="nav-item nav-link active">Login</a>
                                 <a href="" class="nav-item nav-link">Register</a>
                             </div>
                         </div>
                     </nav>
-                </div>
-            </div>
+                <!-- </div> -->
+            <!-- </div> -->
         </div>
         <!-- Navbar End -->
 
@@ -106,7 +115,7 @@
                 <div class="d-inline-flex">
                     <p class="m-0"><a href="">Home</a></p>
                     <p class="m-0 px-2">-</p>
-                    <p class="m-0">Contact</p>
+                    <p class="m-0">Contact Us</p>
                 </div>
             </div>
         </div>
@@ -205,6 +214,7 @@
                             <a class="text-dark mb-2" href="shop.html"><i class="fa fa-angle-right mr-2"></i>Our Shop</a> -->
                                 <a class="text-dark mb-2" href="Service.html"><i class="fa fa-angle-right mr-2"></i>Services</a>
                                     <a class="text-dark mb-2" href="Accessory.html"><i class="fa fa-angle-right mr-2"></i>Accessory         </a>
+                                    <a class="text-dark mb-2" href="cart.html"><i class="fa fa-angle-right mr-2"></i>Shopping Cart         </a>
                                     <!-- <a class="text-dark mb-2" href="detail.html"><i class="fa fa-angle-right mr-2"></i>Shop Detail</a> -->
                                     <!-- <a class="text-dark mb-2" href="cart.html"><i class="fa fa-angle-right mr-2"></i>Shopping Cart</a> -->
                                     <!-- <a class="text-dark mb-2" href="checkout.html"><i class="fa fa-angle-right mr-2"></i>Checkout</a> -->
@@ -255,8 +265,8 @@
         <!-- JavaScript Libraries -->
         <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
-        <script src="lib/easing/easing.min.js"></script>
-        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+        <!-- <script src="lib/easing/easing.min.js"></script> -->
+        <!-- <script src="lib/owlcarousel/owl.carousel.min.js"></script> -->
 
         <!-- Contact Javascript File -->
         <script src="mail/jqBootstrapValidation.min.js"></script>

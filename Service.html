@@ -4,6 +4,7 @@
     <head>
         <meta charset="utf-8">
         <title>KK Electrical</title>
+        <link rel="icon" type="image/icon" href="img/logo.jpeg">
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
         <meta content="Free HTML Templates" name="keywords">
         <meta content="Free HTML Templates" name="description">
@@ -19,9 +20,11 @@
 
         <!-- Font Awesome -->
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+        <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+
 
         <!-- Libraries Stylesheet -->
-        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+        <!-- <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet"> -->
 
         <!-- Customized Bootstrap Stylesheet -->
         <link href="style.css" rel="stylesheet">
@@ -30,7 +33,6 @@
     <body>
         <!-- Topbar Start -->
         <div class="container-fluid">
-
             <div class="row align-items-center py-3 px-xl-5">
                 <div class="col-lg-3 d-none d-lg-block">
                     <a href="" class="text-decoration-none">
@@ -41,7 +43,7 @@
                 <div class="col-lg-6 col-6 text-left">
                     <form action="">
                         <div class="input-group">
-                            <input type="text" class="form-control" placeholder="Search for products">
+                            <input type="text" class="form-control" placeholder="Search..." onkeyup="searchFun()">
                             <div class="input-group-append">
                                 <span class="input-group-text bg-transparent text-primary">
                                     <i class="fa fa-search"></i>
@@ -50,25 +52,25 @@
                         </div>
                     </form>
                 </div>
-
+                <div class="col-lg-3 col-6 text-right">
+                    <!-- <a href="" class="btn border">
+                        <i class="fas fa-heart text-primary"></i>
+                        <span class="badge">0</span>
+                    </a> -->
+                    <a href="" class="btn border">
+                        <i class="fas fa-shopping-cart text-primary"></i>
+                        <span class="badge">0</span>
+                    </a>
+                </div>
             </div>
         </div>
         <!-- Topbar End -->
 
 
         <!-- Navbar Start -->
-        <div class="container-fluid">
+        <div class="container mb-0">
             <div class="row border-top px-xl-5">
-                <div class="col-lg-3 d-none d-lg-block ">
-                    <a class="btn shadow-none d-flex align-items-center justify-content-between bg-primary text-white w-75 "
-                        data-toggle="collapse" href="#navbar-vertical"
-                        style="height: 65px; margin-top: -1px; padding: 0 30px; border-radius: 20px;">
-                        <h6 class="m-0 text-white">Call For Service</h6>
-                        <!-- <i class="fa fa-angle-down text-dark"></i> -->
-                    </a>
-
-                </div>
-                <div class="col-lg-9">
+                <div class="col-lg-12">
                     <nav class="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-0">
                         <a href="" class="text-decoration-none d-block d-lg-none">
                             <h1 class="m-0 display-5 font-weight-semi-bold"><span
@@ -83,6 +85,13 @@
                                 <a href="index.html" class="nav-item nav-link">Home</a>
                                 <a href="Service.html" class="nav-item nav-link active">Services</a>
                                 <a href="Accessory.html" class="nav-item nav-link">Accessory</a>
+                                <div class="nav-item dropdown">
+                                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Pages</a>
+                                    <div class="dropdown-menu rounded-0 m-0">
+                                        <a href="cart.html" class="dropdown-item">Shopping Cart</a>
+                                        <!-- <a href="checkout.html" class="dropdown-item">Checkout</a> -->
+                                    </div>
+                                </div>
                                 <!-- <a href="detail.html" class="nav-item nav-link">Shop Detail</a> -->
 
                                 <a href="contact.html" class="nav-item nav-link ">Contact</a>
@@ -114,48 +123,193 @@
 
 
         <!-- Contact Start -->
-        <div class="container-fluid pt-5 mx-xl-5">
-            <div class=" mb-2" style=" justify-content: center;">
-                <h2 class="section-title"><span class="px-2" id="Fans">Fans</span></h2>
+
+        <div class="container pt-5 ">
+            <div class=" mb-1" style=" justify-content: center;">
+                <h4 class="section-title px-5"><span class="px-2" id="Home">Electric Maintenance
+                </h4>
             </div>
-            <div class="d-flex flex-column justify-content-start ">
-                <a class="text-dark mb-2" href="index.html"><i class="fa fa-angle-right mr-2"></i>Exost Fan</a>
-                <a class="text-dark mb-2" href="Service.html"><i class="fa fa-angle-right mr-2"></i>Selling Fna</a>
-                <a class="text-dark mb-2" href="Accessory.html"><i class="fa fa-angle-right mr-2"></i>Pedestal Fan</a>
-                <a class="text-dark mb-2" href="detail.html"><i class="fa fa-angle-right mr-2"></i>Wall Fan</a>
-             
+            <div class="row px-xl-5 ">
+                <div class="col-lg-3 col-md-12">
+                    <div class="card product-item border-0 mb-3 item">
+                        <div class="card-body border-left border-right pl-1 pt-2 pb-0 bg-Grays"
+                            style="background-color:#f0eaea;">
+                            <h6 class="text-truncate mb-2">ELECTRIC LIGHT POINT
+                            </h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-12">
+                    <div class="card product-item border-0 mb-3 item">
+                        <div class="card-body border-left border-right  p-0 pt-2 pb-0 "
+                            style="background-color:#f0eaea;">
+                            <h6 class="text-truncate mb-2 ml-1"> PLUG PONIT
+                            </h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4">
+                    <div class="card product-item border-0 mb-3 item">
+                        <div class="card-body border-left border-right text-center p-0 pt-2 pb-0"
+                            style="background-color:#f0eaea;">
+                            <h6 class="text-truncate mb-2">2WAY LIGHT POINT
+                            </h6>
+                            <div class="d-flex justify-content-center">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4">
+                    <div class="card product-item border-0 mb-3 item">
+                        <div class="card-body border-left border-right text-center p-0 pt-2 pb-0"
+                            style="background-color:#f0eaea;">
+                            <h6 class="text-truncate mb-2">BELL LIGHT POINT
+                            </h6>
+                            <div class="d-flex justify-content-center">
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class=" mb-2" style=" justify-content: center;">
-                <h2 class="section-title"><span class="px-2" id="Fans">Home Apliance</span></h2>
+            <div class="row px-xl-5 ">
+                <div class="col-lg-3 col-md-4">
+                    <div class="card product-item border-0 mb-3 item">
+                        <div class="card-body border-left border-right text-center p-0 pt-2 pb-0"
+                            style="background-color:#f0eaea;">
+                            <h6 class="text-truncate mb-2">AC POINT [ROOM]
+                            </h6>
+                            <div class="d-flex justify-content-center">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4">
+                    <div class="card product-item border-0 mb-3 item">
+                        <div class="card-body border-left border-right text-center p-0 pt-2 pb-0"
+                            style="background-color:#f0eaea;">
+                            <h6 class="text-truncate mb-2">WIFI / COMPUTER POINT
+                            </h6>
+                            <div class="d-flex justify-content-center">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4">
+                    <div class="card product-item border-0 mb-3 item">
+                        <div class="card-body border-left border-right text-center p-0 pt-2 pb-0"
+                            style="background-color:#f0eaea;">
+                            <h6 class="text-truncate mb-2">TELEPHONE POINT
+
+                            </h6>
+                            <div class="d-flex justify-content-center">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4">
+                    <div class="card product-item border-0 mb-3 item">
+                        <div class="card-body border-left border-right text-center p-0 pt-2 pb-0"
+                            style="background-color:#f0eaea;">
+                            <h6 class="text-truncate mb-2">SARAKIT POINT
+
+                            </h6>
+                            <div class="d-flex justify-content-center">
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="d-flex flex-column justify-content-start ">
-                <a class="text-dark mb-2" href="index.html"><i class="fa fa-angle-right mr-2"></i>Exost Fan</a>
-                <a class="text-dark mb-2" href="Service.html"><i class="fa fa-angle-right mr-2"></i>Selling Fna</a>
-                <a class="text-dark mb-2" href="Accessory.html"><i class="fa fa-angle-right mr-2"></i>Pedestal Fan</a>
-                <a class="text-dark mb-2" href="detail.html"><i class="fa fa-angle-right mr-2"></i>Wall Fan</a>
-             
+            <div class="row px-xl-5 ">
+                <div class="col-lg-6 col-md-4">
+                    <div class="card product-item border-0 mb-3 item">
+                        <div class="card-body border-left border-right text-center p-0 pt-2 pb-0"
+                            style="background-color:#f0eaea;">
+                            <h6 class="text mb-2">ELECTRIC DOMESTIC POINT [15A POINT]
+                            </h6>
+                            <div class="d-flex justify-content-center">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-4">
+                    <div class="card product-item border-0 mb-3 item">
+                        <div class="card-body border-left border-right text-center p-0 pt-2 pb-0"
+                            style="background-color:#f0eaea;">
+                            <h6 class="text-truncate mb-2">3 PHASE POINT
+                            </h6>
+                            <div class="d-flex justify-content-center">
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class=" mb-2" style=" justify-content: center;">
-                <h2 class="section-title"><span class="px-2" id="Fans">Air Cooler</span></h2>
+            <div class=" mb-1" style=" justify-content: center;">
+                <h4 class="section-title px-5"><span class="px-2" id="Home">ELECTRICAL ACCESSORIES Maintenance
+
+                </h4>
             </div>
-            <div class="d-flex flex-column justify-content-start ">
-                <a class="text-dark mb-2" href="index.html"><i class="fa fa-angle-right mr-2"></i>Exost Fan</a>
-                <a class="text-dark mb-2" href="Service.html"><i class="fa fa-angle-right mr-2"></i>Selling Fna</a>
-                <a class="text-dark mb-2" href="Accessory.html"><i class="fa fa-angle-right mr-2"></i>Pedestal Fan</a>
-                <a class="text-dark mb-2" href="detail.html"><i class="fa fa-angle-right mr-2"></i>Wall Fan</a>
-             
-            </div>
-            <div class=" mb-2" style=" justify-content: center;">
-                <h2 class="section-title"><span class="px-2" id="Fans">Electrical Department</span></h2>
-            </div>
-            <div class="d-flex flex-column justify-content-start ">
-                <a class="text-dark mb-2" href="index.html"><i class="fa fa-angle-right mr-2"></i>Exost Fan</a>
-                <a class="text-dark mb-2" href="Service.html"><i class="fa fa-angle-right mr-2"></i>Selling Fna</a>
-                <a class="text-dark mb-2" href="Accessory.html"><i class="fa fa-angle-right mr-2"></i>Pedestal Fan</a>
-                <a class="text-dark mb-2" href="detail.html"><i class="fa fa-angle-right mr-2"></i>Wall Fan</a>
-             
+            <div class="row px-xl-5 ">
+                <div class="col-lg-3 col-md-12">
+                    <div class="card product-item border-0 mb-3 item">
+                        <div class="card-body border-left border-right pl-1 pt-2 pb-0 bg-Grays"
+                            style="background-color:#f0eaea;">
+                            <h6 class="text-truncate mb-2">CEILING FAN FITTING
+
+                            </h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-12">
+                    <div class="card product-item border-0 mb-3 item">
+                        <div class="card-body border-left border-right  p-0 pt-2 pb-0 "
+                            style="background-color:#f0eaea;">
+                            <h6 class="text-truncate mb-2 ml-1"> TUBLIGHT FITTIG
+
+                            </h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4">
+                    <div class="card product-item border-0 mb-3 item">
+                        <div class="card-body border-left border-right text-center p-0 pt-2 pb-0"
+                            style="background-color:#f0eaea;">
+                            <h6 class="text-truncate mb-2">POP LIGHT FITTING
+
+                            </h6>
+                            <div class="d-flex justify-content-center">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4">
+                    <div class="card product-item border-0 mb-3 item">
+                        <div class="card-body border-left border-right text-center p-0 pt-2 pb-0"
+                            style="background-color:#f0eaea;">
+                            <h6 class="text-truncate mb-2">FANCY POP LIGHT FITTING
+
+                            </h6>
+                            <div class="d-flex justify-content-center">
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
+
+        <!-- Popup HTML -->
+        <div id="popup" class="popup-container">
+            <div class="popup-content">
+                <span class="close-btn">&times;</span>
+                <h4 id="service-title"></h4>
+                <p id="service-details"></p>
+                <p><strong>Rating:</strong> <span id="service-rating"></span></p>
+                <button id="call-inquiry-btn" class="btn btn-primary text-white">Call for Inquiry</button>
+                <button id="purchase-service-btn" class="btn btn-success">Purchase Service</button>
+            </div>
+        </div>
+
+
+
 
         <!-- Contact End -->
 
@@ -186,9 +340,14 @@
                                         class="fa fa-angle-right mr-2"></i>Services</a>
                                 <a class="text-dark mb-2" href="Accessory.html"><i
                                         class="fa fa-angle-right mr-2"></i>Accessory</a>
-                                <!-- <a class="text-dark mb-2" href="detail.html"><i class="fa fa-angle-right mr-2"></i>Shop Detail</a> -->
-                                <!-- <a class="text-dark mb-2" href="cart.html"><i class="fa fa-angle-right mr-2"></i>Shopping Cart</a> -->
-                                <!-- <a class="text-dark mb-2" href="checkout.html"><i class="fa fa-angle-right mr-2"></i>Checkout</a> -->
+                                <a class="text-dark mb-2" href="cart.html"><i
+                                        class="fa fa-angle-right mr-2"></i>Shopping Cart</a>
+                                <!-- <a class="text-dark mb-2" href="detail.html"><i class="fa fa-angle-right mr-2"></i>Shop
+                                    Detail</a>
+                                <a class="text-dark mb-2" href="cart.html"><i
+                                        class="fa fa-angle-right mr-2"></i>Shopping Cart</a>
+                                <a class="text-dark mb-2" href="checkout.html"><i
+                                        class="fa fa-angle-right mr-2"></i>Checkout</a> -->
                                 <a class="text-dark" href="contact.html"><i class="fa fa-angle-right mr-2"></i>Contact
                                     Us</a>
                             </div>
@@ -236,15 +395,53 @@
         <!-- JavaScript Libraries -->
         <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
-        <script src="lib/easing/easing.min.js"></script>
-        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+        <!-- <script src="lib/easing/easing.min.js"></script> -->
+        <!-- <script src="lib/owlcarousel/owl.carousel.min.js"></script> -->
 
         <!-- Contact Javascript File -->
         <script src="mail/jqBootstrapValidation.min.js"></script>
         <script src="mail/contact.js"></script>
 
         <!-- Template Javascript -->
-        <script src="main.js"></script>
+        <script type="module" src="main.js"></script>
+        <script>document.addEventListener('DOMContentLoaded', () => {
+                const popup = document.getElementById('popup');
+                const closeBtn = document.querySelector('.popup-content .close-btn');
+
+                // Function to show popup
+                function showPopup(title, details, rating) {
+                    document.getElementById('service-title').textContent = title;
+                    document.getElementById('service-details').textContent = details;
+                    document.getElementById('service-rating').textContent = rating;
+                    popup.style.display = 'flex'; // Show the popup
+                }
+
+                // Function to hide popup
+                function hidePopup() {
+                    popup.style.display = 'none'; // Hide the popup
+                }
+
+                // Event listener to close the popup
+                closeBtn.addEventListener('click', hidePopup);
+                window.addEventListener('click', (event) => {
+                    if (event.target === popup) {
+                        hidePopup();
+                    }
+                });
+
+                // Add click event to items
+                const items = document.querySelectorAll('.product-item');
+                items.forEach(item => {
+                    item.addEventListener('click', () => {
+                        // Example data, replace with actual data
+                        const title = item.querySelector('h6').textContent;
+                        const details = "Detailed information about the service.";
+                        const rating = "4.5/5";
+                        showPopup(title, details, rating);
+                    });
+                });
+            });
+        </script>
     </body>
 
 </html>
