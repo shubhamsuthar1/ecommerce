@@ -21,19 +21,19 @@ document.addEventListener('DOMContentLoaded', () => {
                 <tr>
                     <td>${item.name} - <small>${item.company}</small></td>
                     <td>₹${item.price}</td>
-                    <td>
+                    <td class="w-25">
                         <div class="quantity-control">
                             <button class="decrement-btn" data-id="${item.id}">-</button>
                             <input type="number" value="${item.quantity}" min="1" class="quantity-input w-25" data-id="${item.id}" readonly>
-                            <button class="increment-btn" data-id="${item.id}">+</button>
+                        <button class="increment-btn" data-id="${item.id}">+</button>
                         </div>
                     </td>
                     <td>₹${total}</td>
                     <td>
-                        <button class="btn btn-danger remove-item" data-id="${item.id}">Remove</button>
+                        <button class="btn btn-danger remove-item" data-id="${item.id}">╳</button>
                     </td>
                     <td>
-                        <button class="btn btn-primary buy-item text-white" data-id="${item.id}">Buy</button>
+                    <a href="checkout.html"><button class="btn btn-primary buy-item text-white" data-id="${item.id}">Buy</button></a>
                     </td>
                 </tr>
             `;
@@ -115,7 +115,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function buyItem(event) {
         let productId = event.target.getAttribute('data-id');
-        alert(`Product with ID ${productId} is ready to be bought!`);
+        // alert(`Product with ID ${productId} is ready to be bought!`);
         // Implement the buying logic here.
     }
 
@@ -125,4 +125,20 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     renderCartItems();
+});
+document.addEventListener('DOMContentLoaded', () => {
+    const navbar = document.querySelector('.navbar');
+    const stickyClass = 'sticky';
+
+    // Function to toggle sticky class
+    function toggleStickyNavbar() {
+        if (window.scrollY > 100) { // Adjust the value as needed
+            navbar.classList.add(stickyClass);
+        } else {
+            navbar.classList.remove(stickyClass);
+        }
+    }
+
+    // Add scroll event listener
+    window.addEventListener('scroll', toggleStickyNavbar);
 });

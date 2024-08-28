@@ -2,7 +2,7 @@
     {
         "id":1,
         "name":"Exost Fan",
-        "image": "/img/ac.jpg",
+        "image": "/img/exost fan.jpg",
         "price":1500,
         "discount":1500,
         "company":"Bajaj",
@@ -13,10 +13,10 @@
     {
         "id":2,
         "name":"Selling",
-        "image": " /img/ac.jpg",
+        "image": " /img/Seling Fan image.jpg",
         "price":1500,
         "discount":1500,
-        "company":"Syska",
+        "company":"Almonro",
         "companyL":" /logo/Almonro.png"
 
     },
@@ -25,7 +25,7 @@
     {
         "id":3,
         "name":"pedesti Fan",
-        "image": " /img/ac.jpg",
+        "image": " /img/Pedesti Fan images.jpg",
         "price":1500,
         "discount":1500,
         "company":"Usha",
@@ -36,7 +36,7 @@
     {
         "id":4,
         "name":"wall Fan",
-        "image": " /img/ac.jpg",
+        "image": " /img/Wall Fan images.jpg",
         "price":1500,
         "discount":1500,
         "company":"Orient",
@@ -44,11 +44,11 @@
     },
     {
         "id":5,
-        "name":"wall Fan",
-        "image": " /img/ac.jpg",
+        "name":"pandist Fan",
+        "image": " /img/bajaj/IMG-20240820-WA0012.jpg",
         "price":1300,
         "discount":1500,
-        "company":"Crompton",
+        "company":"Bajaj",
         "companyL":" /logo/Crompton.png"
     },
     {
@@ -57,7 +57,7 @@
         "image": " /img/ac.jpg",
         "price":1300,
         "discount":1500,
-        "company":"Crompton",
-        "companyL":" /logo/Crompton.png"
+        "company":"Havells",
+        "companyL":"/logo/Havells.png"
     }
 ]

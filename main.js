@@ -1,4 +1,3 @@
-import '/style.css'
 
 // const scroll = new LocomotiveScroll({
 //     el: document.querySelector('#items'),
@@ -62,24 +61,24 @@ import '/style.css'
 
 
 
-document.getElementById('homefan').addEventListener('click', function () {
-  window.location.href = 'Accessory.html#Fans';
-});
+// document.getElementById('homefan').addEventListener('click', function () {
+//   window.location.href = 'Accessory.html#Fans';
+// });
 
-document.addEventListener('DOMContentLoaded', function () {
-  if (window.location.hash === '#Fans') {
-      document.getElementById('Fans').scrollIntoView();
-  }
-});
+// document.addEventListener('DOMContentLoaded', function () {
+//   if (window.location.hash === '#Fans') {
+//       document.getElementById('Fans').scrollIntoView();
+//   }
+// });
 
-document.getElementById('Hair').addEventListener('click', function () {
-  window.location.href = 'Accessory.html#AIr-cooler';
-});
-document.addEventListener('DOMContentLoaded', function () {
-  if (window.location.hash === '#AIr-cooler') {
-      document.getElementById('AIr-cooler').scrollIntoView();
-  }
-});
+// document.getElementById('Hair').addEventListener('click', function () {
+//   window.location.href = 'Accessory.html#AIr-cooler';
+// });
+// document.addEventListener('DOMContentLoaded', function () {
+//   if (window.location.hash === '#AIr-cooler') {
+//       document.getElementById('AIr-cooler').scrollIntoView();
+//   }
+// });
 
 
 document.getElementById('HApliance').addEventListener('click', function () {

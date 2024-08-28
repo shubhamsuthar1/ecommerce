@@ -1,15 +1,24 @@
-// Fetching the products JSON dynamically
 async function fetchProducts() {
-    const response = await fetch('./api/product.json');
-    const data = await response.json();
-    return data;
+    try {
+        const response = await fetch('./api/product.json');
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        const data = await response.json();
+        return data;
+    } catch (error) {
+        console.error('Failed to fetch products:', error);
+        alert('Failed to load products. Please try again later.');
+    }
 }
+
 
 document.addEventListener('DOMContentLoaded', async () => {
     let productDiv = document.querySelector('#productDiv');
     let categoryList = document.querySelector('.logo-lists');
-    let allCategories = [];
+    let cartBadge = document.querySelector('.cartBadge');
     const PRODUCTS_PER_LOAD = 20;  // Load 20 products at a time
+    let allCategories = [];
 
     // Fetch the products data
     const products = await fetchProducts();
@@ -26,10 +35,8 @@ document.addEventListener('DOMContentLoaded', async () => {
         productDiv.innerHTML = '';
         let filteredProducts = products.filter(product => selectedCategories.length === 0 || selectedCategories.includes(product.company));
 
-        // Ensure the productDiv container uses the Bootstrap grid system
         productDiv.className = 'row';
 
-        // Display filtered products
         filteredProducts.slice(0, PRODUCTS_PER_LOAD).forEach(product => {
             if (!allCategories.includes(product.company)) {
                 let div = document.createElement('div');
@@ -42,17 +49,15 @@ document.addEventListener('DOMContentLoaded', async () => {
                     </label>
                 `;
                 categoryList.appendChild(div);
-
-                // Add event listener for the category checkboxes
                 div.querySelector('.checkbox').addEventListener('click', debounce(categoryFilter, 300));
                 allCategories.push(product.company);
             }
 
-            // Append product cards to the productDiv
             productDiv.innerHTML += `
-                <div class="col-lg-3 col-md-4 col-sm-6 pb-4">
+           
+                <div class="col-lg-3 col-md-4 col-sm-6 pb-2">
                     <div class="card product-item mb-3 h-100 Fans" data-id="${product.id}">
-                        <div class="card-header product-img position-relative overflow-hidden bg-transparent border-0 p-0 p-4">
+                        <div class="card-header product-img position-relative overflow-hidden bg-transparent border-0 p-0 p-2">
                             <img class="img-fluid w-100" src="${product.image}" alt="${product.name}">
                         </div>
                         <div class="card mt-auto border-left border-right text-center p-0 pt-2 pb-0" id="pname">
@@ -71,10 +76,10 @@ document.addEventListener('DOMContentLoaded', async () => {
                         </div>
                     </div>
                 </div>
+               
             `;
         });
 
-        // Add event listeners to the "Add To Cart" buttons
         let addToCartButtons = document.querySelectorAll('.add-to-cart');
         addToCartButtons.forEach(button => {
             button.addEventListener('click', function() {
@@ -85,7 +90,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                     name: productCard.querySelector('h6').textContent,
                     price: productCard.querySelector('.pricetag').textContent.replace('₹', ''),
                     image: productCard.querySelector('img').src,
-                    quantity: 1 // default quantity is 1 when added to cart
+                    quantity: 1
                 };
 
                 addToCart(product);
@@ -93,10 +98,8 @@ document.addEventListener('DOMContentLoaded', async () => {
         });
     }
 
-    // Function to add a product to the cart
     function addToCart(product) {
         let cart = JSON.parse(localStorage.getItem('cart')) || [];
-
         let existingProductIndex = cart.findIndex(item => item.id === product.id);
         if (existingProductIndex !== -1) {
             cart[existingProductIndex].quantity += 1;
@@ -106,23 +109,41 @@ document.addEventListener('DOMContentLoaded', async () => {
 
         localStorage.setItem('cart', JSON.stringify(cart));
 
-        // Optional: show a pop-up or notification
-        showPopup("Added to cart!");
+        // Update cart badge
+        updateCartBadge();
+
+        // Show cart-side popup
+        
+        showCartPopup(product);
     }
 
-    // Function to show a notification pop-up
-    function showPopup(message) {
+    function updateCartBadge() {
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        cartBadge.textContent = cart.reduce((total, item) => total + item.quantity, 0);
+    }
+
+    function showCartPopup(product) {
         let popup = document.createElement('div');
-        popup.className = 'popup';
-        popup.innerText = message;
+        popup.className = 'cart-popup';
+        popup.innerHTML = `
+            <img src="${product.image}" alt="${product.name}" class="popup-img">
+            <div>
+                <p>${product.name}</p>
+                <p>₹${product.price}</p>
+            </div>
+        `;
         document.body.appendChild(popup);
 
         setTimeout(() => {
-            popup.remove();
-        }, 2000);
+            popup.classList.add('show');
+        }, 10);
+
+        setTimeout(() => {
+            popup.classList.remove('show');
+            setTimeout(() => popup.remove(), 300);
+        }, 3000);
     }
 
-    // Debounce function to limit the rate at which the category filter function is called
     function debounce(func, wait) {
         let timeout;
         return function(...args) {
@@ -131,7 +152,15 @@ document.addEventListener('DOMContentLoaded', async () => {
         };
     }
 
-    // Initial display of products
+    // Initial display of products and update cart badge on page load
     display();
+    updateCartBadge();
 });
 
+document.addEventListener('DOMContentLoaded', () => {
+  
+    let preloader = document.getElementById('preloader');
+    if (preloader) {
+        preloader.style.display = 'none'; 
+    }
+});

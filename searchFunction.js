@@ -30,3 +30,19 @@ document.addEventListener('DOMContentLoaded', () => {
         preloader.style.display = 'none'; 
     }
 });
+document.addEventListener('DOMContentLoaded', () => {
+    const navbar = document.querySelector('.navbar');
+    const stickyClass = 'sticky';
+
+    // Function to toggle sticky class
+    function toggleStickyNavbar() {
+        if (window.scrollY > 100) { // Adjust the value as needed
+            navbar.classList.add(stickyClass);
+        } else {
+            navbar.classList.remove(stickyClass);
+        }
+    }
+
+    // Add scroll event listener
+    window.addEventListener('scroll', toggleStickyNavbar);
+});
