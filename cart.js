@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     <td class="w-25">
                         <div class="quantity-control">
                             <button class="decrement-btn" data-id="${item.id}">-</button>
-                            <input type="number" value="${item.quantity}" min="1" class="quantity-input w-25" data-id="${item.id}" readonly>
+                            <input type="number" value="${item.quantity}" min="1" class="quantity-input " data-id="${item.id}" readonly>
                         <button class="increment-btn" data-id="${item.id}">+</button>
                         </div>
                     </td>

@@ -44,5 +44,18 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Add scroll event listener
-    window.addEventListener('scroll', toggleStickyNavbar);
+    window.addEventListener('wheel', toggleStickyNavbar);//whell
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    let cartBadge = document.querySelector('.cartBadge');
+
+    // Function to update the cart badge
+    function updateCartBadge() {
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        cartBadge.textContent = cart.reduce((total, item) => total + item.quantity, 0);
+    }
+
+    // Initial update of cart badge on page load
+    updateCartBadge();
 });

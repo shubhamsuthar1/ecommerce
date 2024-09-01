@@ -5,8 +5,8 @@
         "image": "/img/exost fan.jpg",
         "price":1500,
         "discount":1500,
-        "company":"Bajaj",
-        "companyL":"/logo/Bajaj.png"
+        "company":"Bajaj"
+      
     },
  
 
@@ -16,8 +16,8 @@
         "image": " /img/Seling Fan image.jpg",
         "price":1500,
         "discount":1500,
-        "company":"Almonro",
-        "companyL":" /logo/Almonro.png"
+        "company":"Almonro"
+      
 
     },
 
@@ -28,8 +28,8 @@
         "image": " /img/Pedesti Fan images.jpg",
         "price":1500,
         "discount":1500,
-        "company":"Usha",
-        "companyL":" /logo/usha.png"
+        "company":"Usha"
+       
     },
 
 
@@ -39,8 +39,8 @@
         "image": " /img/Wall Fan images.jpg",
         "price":1500,
         "discount":1500,
-        "company":"Orient",
-        "companyL":" /logo/orient.png"
+        "company":"Orient"
+      
     },
     {
         "id":5,
@@ -48,8 +48,8 @@
         "image": " /img/bajaj/IMG-20240820-WA0012.jpg",
         "price":1300,
         "discount":1500,
-        "company":"Bajaj",
-        "companyL":" /logo/Crompton.png"
+        "company":"Bajaj"
+       
     },
     {
         "id":6,
@@ -57,7 +57,7 @@
         "image": " /img/ac.jpg",
         "price":1300,
         "discount":1500,
-        "company":"Havells",
-        "companyL":"/logo/Havells.png"
+        "company":"Havells"
+      
     }
 ]

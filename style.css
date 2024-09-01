@@ -58,7 +58,9 @@
   color: #6F6F6F;
   text-align: left;
   background-color: #fff;
+  /* overflow-x: hidden; */
 }
+
 /* [tabindex="-1"]:focus:not(:focus-visible) {
   outline: 0 !important;
 }
@@ -130,6 +132,85 @@ sup {
       sup {
   top: -.5em;
 } */
+@media screen and (max-width: 480px) {
+  .cart-table {
+      font-size: 12px;
+  }
+
+  .cart-table th, .cart-table td {
+      padding: 3px;
+  }
+
+  .quantity-control button {
+      width: 20px;
+      height: 20px;
+  }
+
+  .quantity-control .quantity-input {
+      width: 30px;
+  }
+
+  .cart-table th, .cart-table td {
+      display: block;
+      width: 100%;
+  }
+
+  .cart-table th {
+      display: none; /* Hide headers on very small screens */
+  }
+
+  .cart-table td {
+      display: flex;
+      justify-content: space-between;
+      padding-left: 50%;
+      position: relative;
+  }
+
+  .cart-table td::before {
+      content: attr(data-label);
+      position: absolute;
+      left: 0;
+      width: 45%;
+      padding-left: 10px;
+      font-weight: bold;
+  }
+}
+#advertise{
+  background-color: #EDF1FF;
+  display: flex;
+  padding: 2vw 0;
+overflow: hidden;
+}
+.marque{
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: 3vw;
+  padding: 0 1.5vw;
+  /* background-color: red; */
+  transform: translateX(-100%);
+}
+.marque img{
+  height: 4vh; 
+  
+  
+}
+.marque h5{
+  font-size: 30px;
+  
+  display: flex;
+  align-items: center;
+
+  
+}
+/* .cursor{
+  width: 80px;
+  color: #000;
+  height: 80px;
+  background-color: #000;
+  border-radius: 50%;
+  position: fixed;
+} */
       a {
   color: #563D7C;
   text-decoration: none;
@@ -159,28 +240,52 @@ samp {
   margin-bottom: 1rem;
   overflow: hidden;
 }
-.scroll div{
-  white-space: nowrap;
-  animation: animate var(--t) linear infinite;
-}
-.custom-img{
+
+.clogo .col .logo-lists img{
   width: 100px;
+}
+.clogo .col .logo-lists img input{
+  font-size: 5px;
+}
+.clogo{
+  overflow: auto;
+}
+/* this is for horizontal auto scroll*/
+.scroller-wrapper {
+  width: 100%;
   overflow: hidden;
-  display: inline-flex;
+  white-space: nowrap;
+  box-sizing: border-box;
+  position: relative;
 }
-@keyframes animate{
-  0%{
-    transform: translateX(100%);
+
+.scroller {
+  display: flex;
+  white-space: nowrap;
+  animation: scroll 20s linear infinite;
+  will-change: transform; /* Optimize performance for animations */
+}
+
+.image-container img {
+  width: 100px;
+  height: auto;
+  display: inline-block;
+  margin-right: 20px;
+}
+
+@keyframes scroll {
+  0% {
+      transform: translateX(0);
   }
-  100%{
-transform: translateX(-100%);
+  100% {
+      transform: translateX(-100%);
   }
 }
-.custom-image{
+
+
+/* .custom-image{
   width: 100px;
 }
-
-
 .containe .clogo img {
   width: 120px;
   height: 120px;
@@ -195,7 +300,7 @@ transform: translateX(-100%);
 }
 .containe::-webkit-scrollbar {
   display: none;
-}
+} */
 /* .clogo{
   display: flex;
   gap: 10px;
@@ -203,6 +308,9 @@ transform: translateX(-100%);
 /* .logo-lists::-webkit-scrollbar {
   display: none;
 } */
+#imageContainer::-webkit-scrollbar{
+  display:none;
+}
 .popup-container {
   display: none;
   position: fixed;
@@ -265,7 +373,7 @@ transform: translateX(-100%);
   top: 0;
   /* right:0; */
   left: 0;
-  width: 100vw;
+  width: 99vw;
   z-index: 1000; /* Ensure it stays on top of other content */
   background-color: #f8f9fa; /* Background color to ensure visibility */
   box-shadow: 0px 4px 2px -2px gray; /* Optional: Add a shadow for better visibility */
