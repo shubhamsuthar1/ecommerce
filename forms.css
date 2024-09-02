@@ -1,0 +1,13 @@
+body {
+    background-color: #f8f9fa;
+}
+.form-container {
+    margin-top: 50px;
+    padding: 30px;
+    background-color: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+.btn{
+  background-color: #563D7C;
+  color: white;  
+}

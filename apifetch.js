@@ -77,30 +77,31 @@ document.addEventListener('DOMContentLoaded', async () => {
 
         filteredProducts.slice(0, PRODUCTS_PER_LOAD).forEach(product => {
             productDiv.innerHTML += `
-            <div class="col-lg-3 col-md-4 col-sm-6 pb-2">
-            <div class="card product-item mb-3 h-100 Fans" data-id="${product.id}">
-                <div class="card-header product-img position-relative overflow-hidden bg-transparent border-0 p-0 p-2">
-                    <img class="img-fluid w-100" src="${product.image}" alt="${product.name}">
-                </div>
-                <div class="card mt-auto border-left border-right text-center p-0 pt-2 pb-0" id="pname">
-                    <h6 class="text-truncate mb-2">${product.name}</h6>
-                    <div class="d-flex justify-content-center">
-                        <h6 class="pricetag">₹${product.price}</h6><h6 class="text-muted ml-2"><del>₹${product.discount * 4}</del></h6>
+                <div class="col-lg-3 col-md-4 col-sm-6 pb-2">
+                    <div class="card product-item mb-3 h-100" data-id="${product.id}">
+                        <div class="card-header product-img position-relative overflow-hidden bg-transparent border-0 p-0 p-2">
+                            <img class="img w-100" src="${product.image}" loading="lazy" alt="${product.name}">
+                        </div>
+                        <div class="card-body text-center p-0 pt-2 pb-0">
+                            <h6 class="text-truncate mb-2">${product.name}</h6>
+                            <div class="d-flex justify-content-center">
+                                <h6 class="pricetag">₹${product.price}</h6>
+                                <h6 class="text-muted ml-2"><del>₹${product.discount * 4}</del></h6>
+                            </div>
+                        </div>
+                        <div class="card-footer d-flex justify-content-between mb-1">
+                            <button class="btn btn-primary text-white buy" style="border-radius: 5px;">
+                                <i class="fa fa-shopping-cart"></i> Buy
+                            </button>
+                            <button class="btn btn-primary text-white ml-1 add-to-cart" style="border-radius: 5px;">
+                                <i class="fa fa-shopping-cart mr-1"></i> Add To Cart
+                            </button>
+                        </div>
                     </div>
                 </div>
-                <div class="d-flex justify-content-between mb-1">
-                    <div class="border">
-                        <button class="btn btn-primary text-white float-start buy" style="border-radius: 5px;"><i class="fa fa-shopping-cart"></i> Buy</button>
-                    </div>
-                    <div class="border addcart">
-                        <button class="btn btn-primary text-white ml-1 add-to-cart" style="border-radius: 5px;"><i class="fa fa-shopping-cart mr-1"></i> Add To Cart</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
             `;
         });
+        
 
         let addToCartButtons = document.querySelectorAll('.add-to-cart');
         addToCartButtons.forEach(button => {

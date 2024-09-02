@@ -11,10 +11,11 @@
         <!-- <link href="img/favicon.ico" rel="icon"> -->
 
         <!-- Google Web Fonts -->
-        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <!-- <link rel="preconnect" href="https://fonts.gstatic.com"> -->
         <link
             href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
             rel="stylesheet">
+            <!-- <link rel="preload" as="image" href="your-image.jpg"> -->
 
         <!-- Font Awesome -->
         <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
@@ -50,15 +51,7 @@
                         </div>
                     </form>
                 </div>
-                <div class="col-lg-3 col-6 text-right">
-                    <a href="cart.html" class="btn border">
-                        <i class="fas fa-shopping-cart text-primary"></i>
-                        <span class="cartBadge">0</span>
-                    </a>
-                    <a href="" class="btn border">
-                        <i class="fas fa-user text-primary"></i>
-                    </a>
-                </div>
+               
             </div>
         </div>
         <!-- Topbar End -->
@@ -80,15 +73,27 @@
                         <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                             <div class="navbar-nav mr-auto py-0">
                                 <a href="index.html" class="nav-item nav-link ">Home</a>
-                                <a href="Service.html" class="nav-item nav-link ">Services</a>
+                                <a href="Service.html" class="nav-item nav-link ">Service</a>
                                 <a href="Accessory.html" class="nav-item nav-link">Accessory</a>
-                                <a href="" class="nav-item nav-link active">My Order</a>
+                                <a href="Order.html" class="nav-item nav-link ">My Order</a>
                                 <a href="contact.html" class="nav-item nav-link">Contact</a>
                             </div>
-                            <div class="navbar-nav ml-auto py-0">
-                                <a href="" class="nav-item nav-link">Login</a>
-                                <a href="" class="nav-item nav-link">Register</a>
+                            <div class="col-lg-3 col-6 text-right mr-1">
+                                <a href="cart.html" class="btn border">
+                                    <i class="fas fa-shopping-cart text-primary"></i>
+                                    <span class="cartBadge">0</span>
+                                </a>
+                                <div class="btn-group">
+                                    <a href="#" class="btn border dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <i class="fa fa-user text-primary"></i>
+                                    </a>
+                                    <div class="dropdown-menu dropdown-menu-right">
+                                        <a href="login.html" class="dropdown-item">Login</a>
+                                        <a href="register.html" class="dropdown-item">Register</a>
+                                    </div>
+                                </div>
                             </div>
+                            
                         </div>
                     </nav>
                 </div>
@@ -110,7 +115,7 @@
         </div>
         <!-- Page Header End -->
         <!-- Accessory Start -->
-        <div class="container">
+        <div class="container-fluid">
             <div class=" clogo d-flex" id="imageContainer">
                 <!-- <div class="col d-flex"> -->
                     <!-- <div class="logo-lists ">
@@ -199,8 +204,8 @@
 
 
 
-        <div class="container-fluid  mt-5 " id="productDiv">
-            <div class="row">
+        <div class="container-fluid  mt-5">
+            <div class="row" id="productDiv">
 
             </div>
         </div>
@@ -214,10 +219,10 @@
                                 class="text-primary font-weight-bold border border-white px-3 mr-1">KK</span>Electrical
                         </h1>
                     </a>
-                    <p>Dolore erat dolor sit lorem vero amet. Sed sit lorem magna, ipsum no sit erat lorem
+                    <!-- <p>Dolore erat dolor sit lorem vero amet. Sed sit lorem magna, ipsum no sit erat lorem
                         et
                         magna
-                        ipsum dolore amet erat.</p>
+                        ipsum dolore amet erat.</p> -->
                     <p class="mb-2"><i class="fa fa-map-marker-alt text-primary mr-3"></i>Sola,
                         Ahmedabad,Gujarat</p>
                     <p class="mb-2"><i class="fa fa-envelope text-primary mr-3"></i>info@example.com</p>
@@ -231,12 +236,12 @@
                                 <a class="text-dark mb-2" href="index.html"><i
                                         class="fa fa-angle-right mr-2"></i>Home</a>
                                 <a class="text-dark mb-2" href="Service.html "><i
-                                        class="fa fa-angle-right mr-2"></i>Services</a>
+                                        class="fa fa-angle-right mr-2"></i>Service</a>
                                 <a class="text-dark mb-2" href="Accessory.html"><i
                                         class="fa fa-angle-right mr-2"></i>Accessory</a>
                                 <a class="text-dark mb-2" href="cart.html"><i class="fa fa-angle-right mr-2"></i>My
                                     Cart</a>
-                                <a class="text-dark mb-2" href=""><i class="fa fa-angle-right mr-2"></i>My Order</a>
+                                <a class="text-dark mb-2" href="Order.html"><i class="fa fa-angle-right mr-2"></i>My Order</a>
                                 <a class="text-dark" href="contact.html"><i class="fa fa-angle-right mr-2"></i>Contact
                                     Us</a>
                             </div>

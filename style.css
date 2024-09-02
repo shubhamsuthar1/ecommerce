@@ -175,6 +175,10 @@ sup {
       font-weight: bold;
   }
 }
+.card .card-header .img{
+  width: 100vw;
+
+}
 #advertise{
   background-color: #EDF1FF;
   display: flex;
@@ -251,7 +255,7 @@ samp {
   overflow: auto;
 }
 /* this is for horizontal auto scroll*/
-.scroller-wrapper {
+/* .scroller-wrapper {
   width: 100%;
   overflow: hidden;
   white-space: nowrap;
@@ -263,7 +267,7 @@ samp {
   display: flex;
   white-space: nowrap;
   animation: scroll 20s linear infinite;
-  will-change: transform; /* Optimize performance for animations */
+  will-change: transform; 
 }
 
 .image-container img {
@@ -280,7 +284,100 @@ samp {
   100% {
       transform: translateX(-100%);
   }
+} */
+body {
+  background-color: #f8f9fa;
 }
+.form-container {
+  margin-top: 50px;
+  padding: 30px;
+  background-color: white;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+.scroller-wrapper {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.scroller {
+  display: flex;
+  white-space: nowrap;
+  animation: scroll 10s linear infinite; /* Slower and smoother scroll */
+  will-change: transform;
+}
+
+.image-container {
+  flex: 0 0 auto; /* Prevent flex-grow and flex-shrink */
+}
+
+.image-container img {
+  width: 100px;
+  height: auto;
+  display: inline-block;
+  margin-right: 20px;
+}
+
+@keyframes scroll {
+  0% {
+      transform: translateX(0);
+  }
+  100% {
+      transform: translateX(-50%); /* Adjusted to scroll only halfway before restarting */
+  }
+}
+
+
+/* General Styles */
+.navbar-toggler {
+  margin-left: auto;
+}
+
+.navbar-collapse {
+  text-align: center;
+}
+
+/* Style for Cart and User Icons */
+.navbar .col-lg-3.col-6.text-right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 15px;
+}
+
+.navbar .btn.border {
+  margin-left: 10px;
+}
+
+@media (max-width: 768px) {
+  .navbar-nav {
+      flex-direction: column;
+  }
+  
+  /* Adjust icon spacing */
+  .col-lg-3.col-6.text-right {
+      justify-content: center;
+      margin-top: 10px;
+  }
+  
+  /* Improve spacing between navbar links and icons */
+  .navbar-collapse {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .navbar-nav .nav-item {
+      margin-bottom: 10px;
+  }
+
+  .navbar-collapse .btn.border {
+      margin-bottom: 10px;
+  }
+}
+
 
 
 /* .custom-image{
@@ -373,7 +470,7 @@ samp {
   top: 0;
   /* right:0; */
   left: 0;
-  width: 99vw;
+  width: 100vw;
   z-index: 1000; /* Ensure it stays on top of other content */
   background-color: #f8f9fa; /* Background color to ensure visibility */
   box-shadow: 0px 4px 2px -2px gray; /* Optional: Add a shadow for better visibility */

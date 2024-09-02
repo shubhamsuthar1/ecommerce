@@ -2,7 +2,7 @@
     {
         "id":1,
         "name":"Exost Fan",
-        "image": "/img/exost fan.jpg",
+        "image": "/img/exost fan.webp",
         "price":1500,
         "discount":1500,
         "company":"Bajaj"
@@ -13,7 +13,7 @@
     {
         "id":2,
         "name":"Selling",
-        "image": " /img/Seling Fan image.jpg",
+        "image": " /img/Seling Fan image.webp",
         "price":1500,
         "discount":1500,
         "company":"Almonro"
@@ -25,7 +25,7 @@
     {
         "id":3,
         "name":"pedesti Fan",
-        "image": " /img/Pedesti Fan images.jpg",
+        "image": " /img/Pedesti Fan images.webp",
         "price":1500,
         "discount":1500,
         "company":"Usha"
@@ -45,7 +45,7 @@
     {
         "id":5,
         "name":"pandist Fan",
-        "image": " /img/bajaj/IMG-20240820-WA0012.jpg",
+        "image": " /img/bajaj/IMG-20240820-WA0012.webp",
         "price":1300,
         "discount":1500,
         "company":"Bajaj"
@@ -53,8 +53,8 @@
     },
     {
         "id":6,
-        "name":"wall Fan",
-        "image": " /img/ac.jpg",
+        "name":"Ac",
+        "image": " /img/ac.webp",
         "price":1300,
         "discount":1500,
         "company":"Havells"
